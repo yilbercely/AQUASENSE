@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7fbf8">
+    <title>AquaSense | Monitoreo inteligente del agua</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="topbar">
+        <a href="#inicio" class="logo">
+            <span class="logo-icon">A</span>
+            <span>Aqua<span class="logo-green">Sense</span></span>
+        </a>
+
+        <nav class="navigation">
+            <a href="#inicio" class="nav-link active">Inicio</a>
+            <a href="#nosotros" class="nav-link">Sobre nosotros</a>
+            <a href="#proyecto" class="nav-link">Conocer el proyecto</a>
+        </nav>
+
+        <div class="header-status">
+            <span class="status-dot"></span>
+            <span>Panel de monitoreo</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- INICIO -->
+        <section id="inicio" class="hero section">
+            <div class="hero-copy">
+                <span class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    TECNOLOGÍA PARA EL AGUA
+                </span>
+
+                <h1>El agua bajo<br>
+                    <span class="gradient-text">control inteligente.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Monitoreamos el nivel de tu estanque con tecnología
+                    inteligente para facilitar el seguimiento del agua
+                    y detectar posibles cambios.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#nivel" class="button-primary">
+                        Ver nivel del tanque <span>↗</span>
+                    </a>
+                    <a href="#proyecto" class="button-secondary">
+                        Explorar proyecto
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="status-dot"></span>
+                    Interfaz de demostración
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-glow"></div>
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <div class="water-illustration">
+                    <div class="water-top"></div>
+                    <div class="water-fill">
+                        <div class="wave wave-one"></div>
+                        <div class="wave wave-two"></div>
+                        <span class="water-drop">◆</span>
+                    </div>
+                    <div class="tank-base"></div>
+                </div>
+
+                <div class="floating-tag tag-top">
+                    <span class="tag-icon">✳</span>
+                    <div>
+                        <strong>Monitoreo</strong>
+                        <small>Inteligente</small>
+                    </div>
+                </div>
+
+                <div class="floating-tag tag-bottom">
+                    <span class="mini-pulse"></span>
+                    <div>
+                        <strong>Agua y tecnología</strong>
+                        <small>Una solución conectada</small>
+                    </div>
+                </div>
+
+                <div class="visual-caption">AQUASENSE · SMART WATER</div>
+            </div>
+        </section>
+
+        <!-- NIVEL DEL TANQUE -->
+        <section id="nivel" class="section dashboard-section">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">01 / MONITOREO</span>
+                    <h2>Nivel actual del tanque</h2>
+                    <p>Visualiza el estado del agua en un solo lugar.</p>
+                </div>
+                <span class="demo-badge">● DATOS SIMULADOS</span>
+            </div>
+
+            <div class="dashboard-grid">
+                <article class="card level-card">
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-kicker">LECTURA PRINCIPAL</span>
+                            <h3>Nivel del agua</h3>
+                        </div>
+                        <span class="card-symbol">↗</span>
+                    </div>
+
+                    <div class="level-content">
+                        <div class="gauge" id="gauge" role="img"
+                             aria-label="Nivel simulado del agua: 72 por ciento">
+                            <div class="gauge-inner">
+                                <span class="gauge-number" id="levelValue">72</span>
+                                <span class="gauge-percent">%</span>
+                                <span class="gauge-label">Capacidad</span>
+                            </div>
+                        </div>
+
+                        <div class="level-details">
+                            <span class="detail-label">Estado estimado</span>
+                            <h3 id="levelStatus">Nivel normal</h3>
+                            <p id="levelMessage">
+                                El nivel está dentro del rango de demostración.
+                            </p>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+
+                            <div class="progress-labels">
+                                <span>0 %</span>
+                                <span>100 %</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footnote">
+                        <span>i</span>
+                        La medición real estará disponible al conectar los sensores.
+                    </div>
+                </article>
+
+                <article class="card system-card">
+                    <div class="card-heading">
+                        <div>
+                            <span class="card-kicker">ESTADO GENERAL</span>
+                            <h3>Sistema de monitoreo</h3>
+                        </div>
+                        <span class="system-icon">⌁</span>
+                    </div>
+
+                    <div class="system-status">
+                        <span class="status-ring"></span>
+                        <div>
+                            <strong>Modo demostración</strong>
+                            <p>Sin conexión real a las tarjetas</p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="device-row">
+                        <div class="device-icon">H</div>
+                        <div class="device-info">
+                            <strong>Heltec</strong>
+                            <small>Modelo por confirmar</small>
+                        </div>
+                        <span class="device-badge">Pendiente</span>
+                    </div>
+
+                    <div class="device-row">
+                        <div class="device-icon lilygo">L</div>
+                        <div class="device-info">
+                            <strong>LilyGO</strong>
+                            <small>Modelo por confirmar</small>
+                        </div>
+                        <span class="device-badge">Pendiente</span>
+                    </div>
+
+                    <div class="system-note">
+                        Las conexiones se configurarán cuando se definan
+                        los modelos y el método de comunicación.
+                    </div>
+                </article>
+            </div>
+
+            <div class="metrics-grid">
+                <article class="card metric-card">
+                    <span class="metric-icon">◉</span>
+                    <span class="metric-label">Nivel simulado</span>
+                    <strong><span id="metricLevel">72</span><small>%</small></strong>
+                    <span class="metric-caption">Porcentaje de capacidad</span>
+                </article>
+
+                <article class="card metric-card">
+                    <span class="metric-icon">◷</span>
+                    <span class="metric-label">Última actualización</span>
+                    <strong class="metric-time" id="lastUpdate">--:--:--</strong>
+                    <span class="metric-caption">Hora local del navegador</span>
+                </article>
+
+                <article class="card metric-card">
+                    <span class="metric-icon">⌁</span>
+                    <span class="metric-label">Alertas activas</span>
+                    <strong>0</strong>
+                    <span class="metric-caption">En esta demostración</span>
+                </article>
+            </div>
+
+            <article class="card history-card">
+                <div class="card-heading">
+                    <div>
+                        <span class="card-kicker">COMPORTAMIENTO</span>
+                        <h3>Historial ilustrativo del nivel</h3>
+                    </div>
+                    <span class="history-tag">EJEMPLO</span>
+                </div>
+
+                <div class="chart-wrap">
+                    <div class="chart-y-labels">
+                        <span>100%</span>
+                        <span>75%</span>
+                        <span>50%</span>
+                        <span>25%</span>
+                        <span>0%</span>
+                    </div>
+
+                    <svg class="chart" viewBox="0 0 700 220"
+                         preserveAspectRatio="none"
+                         role="img" aria-label="Gráfica ilustrativa del nivel del agua">
+                        <defs>
+                            <linearGradient id="chartFill" x1="0" y1="0"
+                                            x2="0" y2="1">
+                                <stop offset="0%" stop-color="#16a765"
+                                      stop-opacity="0.24"/>
+                                <stop offset="100%" stop-color="#16a765"
+                                      stop-opacity="0"/>
+                            </linearGradient>
+                        </defs>
+
+                        <g class="chart-grid">
+                            <line x1="0" y1="10" x2="700" y2="10"/>
+                            <line x1="0" y1="60" x2="700" y2="60"/>
+                            <line x1="0" y1="110" x2="700" y2="110"/>
+                            <line x1="0" y1="160" x2="700" y2="160"/>
+                            <line x1="0" y1="210" x2="700" y2="210"/>
+                        </g>
+
+                        <path class="chart-area"
+                              d="M0,95 C55,90 65,125 120,110
+                                 S200,75 250,92 S330,135 385,95
+                                 S470,70 520,85 S625,55 700,65
+                                 L700,210 L0,210 Z"/>
+
+                        <path class="chart-line"
+                              d="M0,95 C55,90 65,125 120,110
+                                 S200,75 250,92 S330,135 385,95
+                                 S470,70 520,85 S625,55 700,65"/>
+                        <circle cx="700" cy="65" r="5" class="chart-point"/>
+                    </svg>
+                </div>
+
+                <div class="chart-x-labels">
+                    <span>08:00</span>
+                    <span>10:00</span>
+                    <span>12:00</span>
+                    <span>14:00</span>
+                    <span>16:00</span>
+                    <span>18:00</span>
+                </div>
+
+                <p class="chart-disclaimer">
+                    Gráfica decorativa: no representa lecturas de un sensor real.
+                </p>
+            </article>
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+        <section id="nosotros" class="section info-section">
+            <div class="info-number">02</div>
+            <div class="info-content">
+                <span class="eyebrow">SOBRE NOSOTROS</span>
+                <h2>Tecnología con un propósito.</h2>
+                <p>
+                    Somos un equipo conformado por 3 aprendices SENA
+                    Guillermo Bautista, Esteban Garavito y Yilber Cely
+                    Estamos en formación del programa de Tegnología en 
+                    instrmentación y control industrial, 
+                    tomamos este proyecto como una oportunidad de aplicar
+                    los conocimientos adquiridos en el programa y desarrollar 
+                    habilidades prácticas en el campo de la instrumentación 
+                    y control industrial.
+                    Contamos con el apoyo de nuestro instructor, el ingeniero 
+                    Eric Hernández, quien nos ha brindado orientación y supervisión en
+                    el desarrollo del proyecto, asegurando que se cumplan los estándares 
+                    de calidad y seguridad.
+                
+                  
+
+                    
+                </p>
+                <p>
+                    AquaSense es una propuesta tecnológica orientada a
+                    visualizar el nivel de un estanque y facilitar la
+                    identificación de cambios importantes.
+                </p>
+            </div>
+            <div class="info-decoration">
+                <div class="decoration-circle">A<span>Q</span></div>
+                <span>INNOVACIÓN · AGUA · TECNOLOGÍA</span>
+            </div>
+        </section>
+
+        <!-- CONOCER EL PROYECTO -->
+        <section id="proyecto" class="section project-section">
+            <div class="project-intro">
+                <span class="eyebrow">03 / CONOCE AQUASENSE</span>
+                <h2>Una visión más inteligente<br>del nivel del agua.</h2>
+                <p>
+                    El proyecto busca medir el nivel de agua de un estanque
+                    mediante sensores y tarjetas electrónicas, para después
+                    mostrar la información en una interfaz web.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-number">01</span>
+                    <div class="feature-icon">⌁</div>
+                    <h3>Captura de datos</h3>
+                    <p>
+                        Un sensor medirá el nivel del agua y enviará
+                        la lectura a la electrónica del sistema.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-number">02</span>
+                    <div class="feature-icon">⇄</div>
+                    <h3>Comunicación</h3>
+                    <p>
+                        Las tarjetas Heltec y LilyGO podrán intercambiar
+                        datos cuando se configure el enlace adecuado.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-number">03</span>
+                    <div class="feature-icon">▤</div>
+                    <h3>Visualización web</h3>
+                    <p>
+                        La interfaz mostrará el nivel, el estado y las
+                        alertas a partir de datos recibidos.
+                    </p>
+                </article>
+            </div>
+
+            <div class="project-callout">
+                <div>
+                    <span class="callout-label">EL SIGUIENTE PASO</span>
+                    <h3>De una demostración a datos reales.</h3>
+                    <p>
+                        Primero validaremos el sensor y la comunicación;
+                        después conectaremos el panel web.
+                    </p>
+                </div>
+                <a href="#nivel" class="button-primary">Volver al panel ↑</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#inicio" class="logo footer-logo">
+            <span class="logo-icon">A</span>
+            <span>Aqua<span class="logo-green">Sense</span></span>
+        </a>
+        <p>Monitoreo inteligente del agua · Proyecto académico</p>
+        <span class="footer-status">
+            <span class="status-dot"></span> Versión de demostración
+        </span>
+    </footer>
+
+</body>
+</html>
